@@ -59,7 +59,7 @@ img, svg { display: block; }
 .site-header { padding: 56px 0 32px; text-align: center; }
 
 /* graffiti pieces sit back, like part of the wall */
-.mark { display: block; width: min(340px, 78%); margin: 0 auto 26px; opacity: 0.88; }
+.mark { display: block; width: min(400px, 86%); margin: 0 auto 22px; }
 .piece { display: block; width: 100%; height: auto; }
 
 /* the name is a neon sign: a dark backing panel screwed to the wall, a mint glass tube

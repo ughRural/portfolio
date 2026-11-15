@@ -400,9 +400,9 @@ h2 {
 }
 
 /* ── contact ── */
-.contact-grid { display: grid; grid-template-columns: 1fr minmax(0, 330px); gap: 32px; align-items: start; }
+.contact-grid { display: grid; grid-template-columns: 1fr minmax(0, 360px); gap: 32px; align-items: start; }
 .brain { rotate: 3deg; }
-.brain.visible { opacity: 0.85; }
+.brain.visible { opacity: 1; }
 
 /* ── footer ── */
 footer { margin-top: 96px; padding-bottom: 48px; }

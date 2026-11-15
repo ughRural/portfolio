@@ -9,7 +9,7 @@ The site behind **aavidm.com**: a static, single-file-per-concern site with no b
 
 ## Preview locally
 
-The logo is drawn with a CSS mask, which browsers block on `file://` pages, so serve the folder instead of opening the file directly:
+Serve the folder with any static server:
 
 ```
 cd public

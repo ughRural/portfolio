@@ -1,0 +1,177 @@
+:root {
+  color-scheme: light;
+  --paper: #f7f3e9;
+  --ink: #1e2530;
+  --muted: #505966;
+  --accent: #a13b26;
+  --rule: #bab4a8;
+  --body-font: "DM Sans", system-ui, sans-serif;
+  --display-font: "Instrument Serif", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 1rem / 1.6 var(--body-font);
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.25em;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 1;
+  padding: 0.5rem 1rem;
+  background: var(--paper);
+  transform: translateY(-120%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.frame {
+  width: min(100% - 2rem, 68rem);
+  margin-inline: auto;
+}
+
+.site-header,
+.site-footer {
+  border-block: 1px solid var(--rule);
+}
+
+.site-header {
+  border-block-start: 0;
+}
+
+.site-footer {
+  border-block-end: 0;
+}
+
+.header-inner,
+.footer-inner,
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem 1.5rem;
+}
+
+.header-inner,
+.footer-inner {
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+
+.wordmark,
+nav a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.intro {
+  display: grid;
+  justify-items: start;
+  padding-block: clamp(4rem, 12vw, 9rem) clamp(3.75rem, 9vw, 7rem);
+}
+
+.intro p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1,
+h2 {
+  font-family: var(--display-font);
+}
+
+h1 {
+  font-size: clamp(3.2rem, 11vw, 9.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+}
+
+h1 span,
+.work-link {
+  color: var(--accent);
+}
+
+.work-link {
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+.content-section {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr) minmax(0, 2fr);
+  align-items: start;
+  gap: 1rem 2rem;
+  padding-block: clamp(2rem, 5vw, 3.5rem);
+  border-top: 1px solid var(--rule);
+}
+
+h2 {
+  font-size: clamp(2.25rem, 4vw, 3.4rem);
+  line-height: 1;
+}
+
+h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.content-section p {
+  max-width: 53ch;
+  margin: 0;
+  color: var(--muted);
+}
+
+.project {
+  grid-column: 2;
+}
+
+.project p {
+  margin-top: 0.35rem;
+}
+
+.footer-inner {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 40rem) {
+  .content-section {
+    grid-template-columns: 1fr;
+  }
+
+  .project {
+    grid-column: auto;
+  }
+}

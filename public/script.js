@@ -80,6 +80,14 @@
 
   function reveal() {
     cursor.classList.add('done');
+    // split the name into letters so one of them can misbehave like a tired tube
+    text.textContent = '';
+    NAME.split('').forEach(function (ch, n) {
+      var s = document.createElement('span');
+      s.textContent = ch;
+      if (n === 9) s.className = 'dud';
+      text.appendChild(s);
+    });
     document.getElementById('site-sub').classList.add('show');
     document.querySelector('.sign').classList.add('lit');
     nav.classList.add('show');

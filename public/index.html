@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&amp;family=Tilt+Neon&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tilt+Neon&amp;display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,54 +25,10 @@
 
   <header class="site-header">
     <a class="mark" href="#home" data-page="home" aria-label="home">
-      <svg class="piece" viewBox="-10 0 960 570" role="img" aria-label="graffiti tag in teal bubble letters with a halo">
-        <defs>
-          <!-- wobbles the edges and softens them so shapes read as sprayed, not drawn -->
-          <filter id="spray" x="-5%" y="-5%" width="110%" height="110%">
-            <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="n"/>
-            <feDisplacementMap in="SourceGraphic" in2="n" scale="8"/>
-            <feGaussianBlur stdDeviation="0.9"/>
-          </filter>
-          <filter id="mist" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="9"/></filter>
-          <linearGradient id="teal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a3d8ce"/><stop offset="1" stop-color="#76b0a7"/></linearGradient>
-        </defs>
-        <!-- overspray, so the black outline still reads on a dark page -->
-        <g fill="none" stroke="#4a5857" stroke-width="40" stroke-linejoin="round" opacity=".55" filter="url(#mist)">
-            <path d="M30 130 Q120 125 215 72 Q240 60 245 95 Q250 240 290 380 Q300 420 265 425 Q225 425 205 385 Q160 400 125 385 Q95 430 40 432 Q5 430 20 390 Q60 280 30 130Z"/>
-            <path d="M262 215 C250 140 330 125 355 195 C372 125 470 130 458 215 C450 310 395 390 350 462 C310 390 270 310 262 215Z"/>
-            <path d="M452 440 C425 320 420 130 530 118 C640 110 625 250 665 335 Q690 410 652 455 Q612 472 592 425 Q562 385 540 435 Q505 480 452 440Z"/>
-            <path d="M672 425 C640 300 680 62 780 42 C880 28 850 200 885 285 C915 355 880 432 805 432 C750 434 705 452 672 425Z"/>
-        </g>
-        <g filter="url(#spray)">
-          <g fill="url(#teal)" stroke="#0b0b0c" stroke-width="20" stroke-linejoin="round" paint-order="stroke">
-            <path d="M30 130 Q120 125 215 72 Q240 60 245 95 Q250 240 290 380 Q300 420 265 425 Q225 425 205 385 Q160 400 125 385 Q95 430 40 432 Q5 430 20 390 Q60 280 30 130Z"/>
-            <path d="M262 215 C250 140 330 125 355 195 C372 125 470 130 458 215 C450 310 395 390 350 462 C310 390 270 310 262 215Z"/>
-            <path d="M452 440 C425 320 420 130 530 118 C640 110 625 250 665 335 Q690 410 652 455 Q612 472 592 425 Q562 385 540 435 Q505 480 452 440Z"/>
-            <path d="M672 425 C640 300 680 62 780 42 C880 28 850 200 885 285 C915 355 880 432 805 432 C750 434 705 452 672 425Z"/>
-            <circle cx="820" cy="508" r="28" fill="#b4bab5" stroke-width="13"/>
-          </g>
-          <g fill="none" stroke="#0b0b0c" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M520 445 L610 245 L690 425"/>
-            <path d="M548 335 L705 312"/>
-          </g>
-          <path class="ooze" fill="#8cc7bd" d="M348.5 450 Q350.5 495 349.5 519 A4.5 5.5 0 1 0 354.5 519 Q353.5 495 355.5 450Z"/>
-          <path class="ooze slow" fill="#8cc7bd" d="M596.5 455 Q598.5 480 597.5 491 A4.5 5.5 0 1 0 602.5 491 Q601.5 480 603.5 455Z"/>
-          <g fill="none" stroke="#eef1ea" stroke-linecap="round">
-            <path d="M195 145 Q225 245 250 335" stroke-width="12" opacity=".8"/>
-            <path d="M425 190 Q447 212 435 255" stroke-width="10" opacity=".85"/>
-            <path d="M492 158 q40 -22 72 6" stroke-width="9" opacity=".7"/>
-            <path d="M800 85 Q822 150 815 222" stroke-width="10" opacity=".65"/>
-            <path d="M822 295 q30 -16 40 10" stroke-width="9"/>
-            <path d="M30 408 Q115 445 262 432" stroke="#d6d6d0" stroke-width="15" opacity=".6"/>
-            <ellipse cx="770" cy="78" rx="190" ry="37" stroke-width="13" transform="rotate(-4 770 78)"/>
-          </g>
-          <circle cx="844" cy="355" r="6" fill="#eef1ea"/>
-          <circle cx="812" cy="500" r="6" fill="#eef1ea" opacity=".8"/>
-        </g>
-      </svg>
+      <img class="piece" src="assets/tag.webp" width="900" height="588" alt="graffiti tag in pale blue bubble letters with a halo">
     </a>
     <div class="sign">
-      <div id="site-name" aria-label="aavid mathrawala"><span class="ghost" aria-hidden="true">aavid mathrawala</span><span class="typed" aria-hidden="true"><span id="tw-text"></span><span id="tw-cursor"></span></span></div>
+      <div class="tube"><div id="site-name" aria-label="aavid mathrawala"><span class="ghost" aria-hidden="true">aavid mathrawala</span><span class="typed" aria-hidden="true"><span id="tw-text"></span><span id="tw-cursor"></span></span></div></div>
     </div>
     <p class="sub" id="site-sub">you're a genius</p>
     <nav id="site-nav" aria-label="main navigation">
@@ -360,7 +316,7 @@
           <!-- milo -->
           <article class="card fade-item">
             <div class="viz">
-              <span class="spray" aria-label="aiden was here">aiden was here<i></i></span>
+              <img class="spray" src="assets/aiden-was-here.webp" width="800" height="265" loading="lazy" alt="aiden was here, in spray paint">
               <div class="win" style="top:3%;right:0;width:84%;aspect-ratio:16/11;">
                 <svg viewBox="0 0 400 275" role="img" aria-label="illustration of a live muscle activation signal">
                   <line x1="0" y1="110" x2="400" y2="110" stroke="#fff" stroke-opacity=".08"/>
@@ -410,35 +366,7 @@
           </ul>
         </section>
           </div>
-          <svg class="piece brain fade-item" viewBox="0 0 600 570" role="img" aria-label="graffiti of a brain with 'use your brain' sprayed around it, and the same phrase in japanese behind">
-            <g class="jp" fill="none" stroke-width="4" stroke-linejoin="round" filter="url(#spray)">
-              <text x="300" y="150" stroke="#6fa79c">脳を使え</text>
-              <text x="318" y="512" stroke="#7f95ad">脳を使え</text>
-            </g>
-            <ellipse cx="300" cy="300" rx="190" ry="120" fill="#e9efe8" opacity=".16" filter="url(#mist)"/>
-            <g filter="url(#spray)">
-              <g fill="none" stroke="#e8e6da" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M335 92 C200 62 42 78 42 124 C42 166 120 150 176 150"/>
-                <path d="M150 131 L181 150 L150 169"/>
-                <path d="M392 112 C440 66 492 108 440 148 L486 160" stroke-width="10"/>
-              </g>
-              <text class="hand use" x="296" y="152" fill="#9fd3c8">use</text>
-              <path d="M170 300 C150 250 190 215 230 225 C245 190 310 185 330 215 C370 195 430 220 425 265 C460 285 450 340 415 350 C410 385 350 400 325 375 C300 400 240 400 225 370 C185 375 155 340 170 300Z" fill="#ecebe0" stroke="#0d0d0d" stroke-width="14" stroke-linejoin="round"/>
-              <g fill="none" stroke="#0d0d0d" stroke-width="9" stroke-linecap="round">
-                <path d="M230 225 C250 260 215 290 250 310 C270 330 260 350 282 360"/>
-                <path d="M330 215 C310 250 350 270 320 300 C300 325 340 345 325 375"/>
-                <path d="M425 265 C390 270 380 300 402 320"/>
-                <path d="M170 300 C200 300 215 320 205 346"/>
-                <path d="M332 384 Q346 410 336 426"/>
-              </g>
-              <g transform="rotate(-6 300 480)">
-                <text class="hand" x="300" y="486" fill="#f1f1ee">your brain</text>
-                <path d="M150 512 L462 512" fill="none" stroke="#f1f1ee" stroke-width="6" stroke-linecap="round" opacity=".8"/>
-              </g>
-              <path class="ooze" fill="#9fd3c8" d="M264.5 156 Q266.5 192 265.5 210 A4.5 5.5 0 1 0 270.5 210 Q269.5 192 271.5 156Z"/>
-              <path class="ooze slow" fill="#f1f1ee" d="M368.5 500 Q370.5 528 369.5 542 A4.5 5.5 0 1 0 374.5 542 Q373.5 528 375.5 500Z"/>
-            </g>
-          </svg>
+          <img class="piece brain fade-item" src="assets/use-your-brain.webp" width="900" height="815" loading="lazy" alt="dripping graffiti of a brain with 'use your brain' sprayed around it">
         </div>
       </main>
     </div>

@@ -6,7 +6,7 @@
   <title>aavid mathrawala</title>
   <meta name="description" content="Aavid Mathrawala: biomedical engineering at Johns Hopkins. EEG, brain-computer interfaces, and neurotechnology research.">
   <meta name="author" content="Aavid Mathrawala">
-  <meta name="theme-color" content="#07070c">
+  <meta name="theme-color" content="#0a0c0d">
   <meta property="og:title" content="aavid mathrawala">
   <meta property="og:description" content="Biomedical engineering at Johns Hopkins. EEG, brain-computer interfaces, and neurotechnology research.">
   <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tilt+Neon&amp;display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -27,7 +27,10 @@
     <a class="mark" href="#home" data-page="home" aria-label="home">
       <span class="mark-img" aria-hidden="true"></span>
     </a>
-    <div id="site-name" aria-label="aavid mathrawala"><span id="tw-text" aria-hidden="true"></span><span id="tw-cursor" aria-hidden="true"></span></div>
+    <div class="sign">
+      <div id="site-name" aria-label="aavid mathrawala"><span class="ghost" aria-hidden="true">aavid mathrawala</span><span class="typed" aria-hidden="true"><span id="tw-text"></span><span id="tw-cursor"></span></span></div>
+      <p class="sub" id="site-sub">you're a genius</p>
+    </div>
     <nav id="site-nav" aria-label="main navigation">
       <button class="nav-btn" data-page="home">home</button>
       <button class="nav-btn" data-page="experience">experience</button>
@@ -42,37 +45,31 @@
     <!-- ══════════ HOME ══════════ -->
     <div id="page-home" class="page">
       <main>
-        <p class="lede fade-item">
-          biomedical engineering @ johns hopkins. i build things that read the brain and body:
-          eeg, emg, and the models that make sense of them.
-        </p>
+        <p class="lede fade-item">biomedical engineering @ johns hopkins</p>
 
         <section class="fade-item">
-          <h2>now</h2>
+          <h2>genius takes:</h2>
           <ul class="dots">
-            <li>in-ear eeg research at the thakor lab of neural engineering</li>
-            <li>building milo, an semg wearable that shows how your muscles work while you train</li>
-            <li>first year of biomedical engineering at johns hopkins, class of 2030</li>
+            <li>judge a book by its cover</li>
+            <li>thinking is the root of failure</li>
           </ul>
         </section>
 
         <section class="fade-item">
-          <h2>highlights</h2>
+          <h2>current fav anime:</h2>
           <ul class="dots">
-            <li><span>first-author paper on eeg-based acute pain classification, <a class="ilink" href="https://arxiv.org/abs/2510.05511" target="_blank" rel="noopener noreferrer">on arxiv</a></span></li>
-            <li>1st place, wssef / crsef embedded systems (2025)</li>
-            <li>1st place, microsoft ai hackathon</li>
-            <li>presented neurodose to the ceo of houston methodist</li>
+            <li>sword art online</li>
+            <li>monster</li>
+            <li>code geass</li>
           </ul>
         </section>
 
         <section class="fade-item">
-          <h2>toolkit</h2>
+          <h2>current stats:</h2>
           <ul class="dots">
-            <li>python, javascript, arduino, unity</li>
-            <li>eeg and semg acquisition, signal processing</li>
-            <li>comsol finite-element simulation</li>
-            <li>machine learning: xgboost, svm</li>
+            <li>125.6 lbs</li>
+            <li><span>heart rate: <span class="num" id="stat-hr">72</span> bpm</span></li>
+            <li><span>emg raw: <span class="num" id="stat-emg">270</span> <span class="unit">mV</span></span></li>
           </ul>
         </section>
 
@@ -100,43 +97,113 @@
 
         <section class="fade-item">
           <h2>research + work</h2>
-          <ol class="rows">
-            <li class="row">
-              <span class="yr">2026 – now</span>
-              <div>
-                <p class="t">undergraduate researcher <span class="at">@ thakor lab of neural engineering, johns hopkins</span></p>
-                <p class="d">analyzing in-ear eeg recordings in python and building comsol finite-element models to find the best electrode placements in the ear canal</p>
-              </div>
+          <ol class="xps">
+
+            <li class="xp open">
+              <button class="xp-head" aria-expanded="true">
+                <span class="yr">2026 – now<i class="live" aria-hidden="true"></i></span>
+                <span class="xp-main">
+                  <span class="t">undergraduate researcher <span class="at">@ thakor lab of neural engineering, johns hopkins</span></span>
+                  <span class="d">analyzing in-ear eeg recordings in python and building comsol finite-element models to find the best electrode placements in the ear canal</span>
+                </span>
+                <span class="chev" aria-hidden="true"></span>
+              </button>
+              <div class="xp-body"><div class="xp-inner">
+                <ul class="dots">
+                  <li>python signal processing on real in-ear eeg recordings to measure signal quality and compare electrodes</li>
+                  <li>parameterized comsol models and large-scale anatomical simulations that map lead-field sensitivity across ear-canal geometries and neural sources</li>
+                  <li>figures for pi presentations; methodology manuscript in preparation</li>
+                </ul>
+                <div class="tags"><span>python</span><span>comsol</span><span>in-ear eeg</span><span>baltimore, md</span></div>
+              </div></div>
             </li>
-            <li class="row">
-              <span class="yr">2025</span>
-              <div>
-                <p class="t">research intern <span class="at">@ houston methodist, center for innovation</span></p>
-                <p class="d">studied hospital pain-management workflows with the innovation lab and used clinical feedback to improve the eeg pain model</p>
-              </div>
+
+            <li class="xp">
+              <button class="xp-head" aria-expanded="false">
+                <span class="yr">2025</span>
+                <span class="xp-main">
+                  <span class="t">research intern <span class="at">@ houston methodist, center for innovation</span></span>
+                  <span class="d">studied hospital pain-management workflows with the innovation lab and used clinical feedback to improve the eeg pain model</span>
+                </span>
+                <span class="chev" aria-hidden="true"></span>
+              </button>
+              <div class="xp-body"><div class="xp-inner">
+                <ul class="dots">
+                  <li>shadowed the ceo, researchers, and innovation lab team to see how pain is managed and how devices get into a hospital</li>
+                  <li>learned manuscript development and applied clinical feedback to the model's accuracy and real-time feasibility</li>
+                </ul>
+                <div class="tags"><span>clinical research</span><span>eeg</span><span>remote</span></div>
+                <a class="ilink" href="https://arxiv.org/abs/2510.05511" target="_blank" rel="noopener noreferrer">read the paper on arxiv ↗</a>
+              </div></div>
             </li>
-            <li class="row">
-              <span class="yr">2025</span>
-              <div>
-                <p class="t">neuroscience + ai research intern <span class="at">@ openbeing lab</span></p>
-                <p class="d">modeled memory formation and loss with deep learning, and built neural network simulations of memory retrieval and motor control</p>
-              </div>
+
+            <li class="xp">
+              <button class="xp-head" aria-expanded="false">
+                <span class="yr">2025</span>
+                <span class="xp-main">
+                  <span class="t">neuroscience + ai research intern <span class="at">@ openbeing lab</span></span>
+                  <span class="d">modeled memory formation and loss with deep learning, and built neural network simulations of memory retrieval and motor control</span>
+                </span>
+                <span class="chev" aria-hidden="true"></span>
+              </button>
+              <div class="xp-body"><div class="xp-inner">
+                <ul class="dots">
+                  <li>investigated retrograde amnesia and synaptic plasticity</li>
+                  <li>designed and tested simulations of memory retrieval and motor-neuron control for ai-driven cognitive models</li>
+                </ul>
+                <div class="tags"><span>deep learning</span><span>neuroscience</span><span>france, remote</span></div>
+              </div></div>
             </li>
-            <li class="row">
-              <span class="yr">2024 – 2026</span>
-              <div>
-                <p class="t">president <span class="at">@ science national honor society, eastlake</span></p>
-                <p class="d">led 200+ members. ran science fairs, outreach events for k–8 students, and funded stem camps with uw researchers and the kcls library</p>
-              </div>
+
+            <li class="xp">
+              <button class="xp-head" aria-expanded="false">
+                <span class="yr">2024 – 2026</span>
+                <span class="xp-main">
+                  <span class="t">president <span class="at">@ science national honor society, eastlake</span></span>
+                  <span class="d">led 200+ members. ran science fairs, outreach events for k–8 students, and funded stem camps with uw researchers and the kcls library</span>
+                </span>
+                <span class="chev" aria-hidden="true"></span>
+              </button>
+              <div class="xp-body"><div class="xp-inner">
+                <ul class="dots">
+                  <li>elementary science fairs, dissections, and monthly stem meetings</li>
+                  <li>large outreach events reaching 100+ k–8 students in the community</li>
+                  <li>funded summer and school-year stem camps with uw professors, researchers, and kcls</li>
+                </ul>
+                <div class="tags"><span>leadership</span><span>stem outreach</span><span>sammamish, wa</span></div>
+                <a class="ilink" href="https://sammamishindependent.com/2025/10/eastlake-snhs-launches-stem-saturdays-program-to-ignite-passion-for-science-in-younger-students/" target="_blank" rel="noopener noreferrer">stem saturdays in the sammamish independent ↗</a>
+              </div></div>
             </li>
-            <li class="row">
-              <span class="yr">2024</span>
-              <div>
-                <p class="t">intern <span class="at">@ seattle children's research institute</span></p>
-                <p class="d">cancer immunology in the sarkar lab: t-cell research, pcr, and flow cytometry</p>
-              </div>
+
+            <li class="xp">
+              <button class="xp-head" aria-expanded="false">
+                <span class="yr">2024</span>
+                <span class="xp-main">
+                  <span class="t">intern <span class="at">@ seattle children's research institute</span></span>
+                  <span class="d">cancer immunology in the sarkar lab: t-cell research, pcr, and flow cytometry</span>
+                </span>
+                <span class="chev" aria-hidden="true"></span>
+              </button>
+              <div class="xp-body"><div class="xp-inner">
+                <ul class="dots">
+                  <li>assisted with t-cell research, pcr procedures, and flow cytometry</li>
+                  <li>learned flowjo and observed car t-cell protocols in translational research</li>
+                </ul>
+                <div class="tags"><span>immunology</span><span>flowjo</span><span>seattle, wa</span></div>
+              </div></div>
             </li>
+
           </ol>
+        </section>
+
+        <section class="fade-item">
+          <h2>toolkit</h2>
+          <ul class="dots">
+            <li>python, javascript, arduino, unity</li>
+            <li>eeg and semg acquisition, signal processing</li>
+            <li>comsol finite-element simulation</li>
+            <li>machine learning: xgboost, svm</li>
+          </ul>
         </section>
 
         <section class="fade-item">
@@ -157,15 +224,6 @@
               </div>
             </li>
           </ol>
-        </section>
-
-        <section class="fade-item">
-          <h2>awards</h2>
-          <ul class="dots">
-            <li>1st place, wssef / crsef embedded systems (2025)</li>
-            <li>1st place, microsoft ai hackathon</li>
-            <li>presented neurodose to the ceo of houston methodist</li>
-          </ul>
         </section>
       </main>
     </div>
@@ -205,15 +263,15 @@
                     <pattern id="g1" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" fill="none" stroke="#fff" stroke-opacity=".05"/></pattern>
                   </defs>
                   <rect width="440" height="360" fill="url(#g1)"/>
-                  <g class="rings" fill="none" stroke="var(--cyan)">
+                  <g class="rings" fill="none" stroke="var(--green)">
                     <ellipse cx="300" cy="150" rx="34" ry="26"/>
                     <ellipse cx="300" cy="150" rx="70" ry="54"/>
                     <ellipse cx="300" cy="150" rx="110" ry="86"/>
                     <ellipse cx="300" cy="150" rx="154" ry="122"/>
                     <ellipse cx="300" cy="150" rx="202" ry="162"/>
                   </g>
-                  <circle cx="300" cy="150" r="5" fill="var(--pink)"/>
-                  <circle class="ping" cx="300" cy="150" r="5" fill="none" stroke="var(--pink)"/>
+                  <circle cx="300" cy="150" r="5" fill="var(--red)"/>
+                  <circle class="ping" cx="300" cy="150" r="5" fill="none" stroke="var(--red)"/>
                   <!-- ear canal -->
                   <path d="M0 232 C70 226 108 206 150 214 C186 221 204 246 240 244" fill="none" stroke="#e8e8f2" stroke-opacity=".7" stroke-width="1.6"/>
                   <path d="M0 292 C76 290 112 268 150 274 C190 281 206 300 240 296" fill="none" stroke="#e8e8f2" stroke-opacity=".7" stroke-width="1.6"/>
@@ -238,10 +296,10 @@
               <div class="win" style="top:3%;right:0;width:84%;aspect-ratio:16/13;">
                 <svg viewBox="0 0 400 325" preserveAspectRatio="none" role="img" aria-label="illustration of scrolling eeg traces">
                   <g class="scroll" fill="none" stroke-width="1.4" stroke-linejoin="round">
-                    <path data-trace="eeg" data-seed="3"  data-y="50"  data-amp="17" stroke="var(--cyan)"/>
-                    <path data-trace="eeg" data-seed="11" data-y="125" data-amp="17" stroke="var(--cyan)" stroke-opacity=".7"/>
-                    <path data-trace="eeg" data-seed="27" data-y="200" data-amp="17" stroke="var(--pink)"/>
-                    <path data-trace="eeg" data-seed="41" data-y="275" data-amp="17" stroke="var(--cyan)" stroke-opacity=".7"/>
+                    <path data-trace="eeg" data-seed="3"  data-y="50"  data-amp="17" stroke="var(--green)"/>
+                    <path data-trace="eeg" data-seed="11" data-y="125" data-amp="17" stroke="var(--green)" stroke-opacity=".7"/>
+                    <path data-trace="eeg" data-seed="27" data-y="200" data-amp="17" stroke="var(--red)"/>
+                    <path data-trace="eeg" data-seed="41" data-y="275" data-amp="17" stroke="var(--green)" stroke-opacity=".7"/>
                   </g>
                 </svg>
               </div>

@@ -80,6 +80,8 @@
 
   function reveal() {
     cursor.classList.add('done');
+    document.getElementById('site-sub').classList.add('show');
+    document.querySelector('.sign').classList.add('lit');
     nav.classList.add('show');
     setTimeout(function () {
       document.getElementById('site-divider').classList.add('show');
@@ -101,6 +103,55 @@
         setTimeout(reveal, 450);
       }
     })();
+  }
+
+  // ── experience: click a role to open it ──
+  document.querySelectorAll('.xp-head').forEach(function (head) {
+    head.addEventListener('click', function () {
+      var open = head.parentElement.classList.toggle('open');
+      head.setAttribute('aria-expanded', String(open));
+    });
+  });
+
+  // ── live stats on the home page ──
+  // Each value drifts as a random walk inside its range.
+  function drift(el, range, step, every) {
+    var v = null;
+    function tick() {
+      var r = range();
+      if (v === null || v < r[0] || v > r[1]) v = r[0] + Math.random() * (r[1] - r[0]);
+      v += (Math.random() - 0.5) * 2 * step(r);
+      v = Math.min(r[1], Math.max(r[0], v));
+      el.textContent = Math.round(v);
+    }
+    tick();
+    setInterval(tick, every);
+  }
+
+  // 6:30 pm to 8:00 pm eastern, every day
+  var easternClock = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/New_York', hour: 'numeric', minute: 'numeric', hourCycle: 'h23'
+  });
+  function isTrainingTime() {
+    var h = 0, m = 0;
+    easternClock.formatToParts(new Date()).forEach(function (p) {
+      if (p.type === 'hour') h = Number(p.value);
+      if (p.type === 'minute') m = Number(p.value);
+    });
+    var mins = h * 60 + m;
+    return mins >= 18 * 60 + 30 && mins < 20 * 60;
+  }
+
+  var hr = document.getElementById('stat-hr'), emg = document.getElementById('stat-emg');
+  if (hr && emg) {
+    if (reduced) {
+      hr.textContent = '60–85';
+      emg.textContent = isTrainingTime() ? '500–1000' : '200–350';
+    } else {
+      drift(hr, function () { return [60, 85]; }, function () { return 2; }, 1100);
+      drift(emg, function () { return isTrainingTime() ? [500, 1000] : [200, 350]; },
+        function (r) { return (r[1] - r[0]) * 0.18; }, 220);
+    }
   }
 
   // ── signal traces for the project cards ──

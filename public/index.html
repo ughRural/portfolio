@@ -1,55 +1,319 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Aavid Mathrawala's personal portfolio.">
-    <title>Aavid Mathrawala | Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Instrument+Serif&amp;display=swap">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header" id="top">
-      <div class="frame header-inner">
-        <a class="wordmark" href="#top">aavidm.com</a>
-        <nav aria-label="Main navigation">
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="https://github.com/ughRural">GitHub <span aria-hidden="true">↗</span></a>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>aavid mathrawala</title>
+  <meta name="description" content="Aavid Mathrawala: biomedical engineering at Johns Hopkins. EEG, brain-computer interfaces, and neurotechnology research.">
+  <meta name="author" content="Aavid Mathrawala">
+  <meta name="theme-color" content="#07070c">
+  <meta property="og:title" content="aavid mathrawala">
+  <meta property="og:description" content="Biomedical engineering at Johns Hopkins. EEG, brain-computer interfaces, and neurotechnology research.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aavidm.com/">
+  <meta property="og:image" content="https://aavidm.com/assets/favicon.png">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
 
-    <main id="main" class="frame">
-      <section class="intro" aria-labelledby="name">
-        <p>Personal portfolio</p>
-        <h1 id="name">Aavid<br>Mathrawala<span>.</span></h1>
-        <a class="work-link" href="#work">View selected work <span aria-hidden="true">↓</span></a>
-      </section>
+  <header class="site-header">
+    <a class="mark" href="#home" data-page="home" aria-label="home">
+      <span class="mark-img" aria-hidden="true"></span>
+    </a>
+    <div id="site-name" aria-label="aavid mathrawala"><span id="tw-text" aria-hidden="true"></span><span id="tw-cursor" aria-hidden="true"></span></div>
+    <nav id="site-nav" aria-label="main navigation">
+      <button class="nav-btn" data-page="home">home</button>
+      <button class="nav-btn" data-page="experience">experience</button>
+      <button class="nav-btn" data-page="projects">projects</button>
+      <button class="nav-btn" data-page="contact">contact</button>
+    </nav>
+    <div class="rule" id="site-divider"></div>
+  </header>
 
-      <section class="content-section" id="work" aria-labelledby="work-heading">
-        <h2 id="work-heading">Selected work</h2>
-        <!-- Duplicate the article for more projects. Add a link when a project has a URL. -->
-        <article class="project">
-          <h3>Project title</h3>
-          <p>Describe what you made, your role, and what the project achieved.</p>
-        </article>
-      </section>
+  <div id="site-content">
 
-      <section class="content-section" id="about" aria-labelledby="about-heading">
-        <h2 id="about-heading">About</h2>
-        <p>Introduce yourself here and share what you’re working on or what you’d like to do next.</p>
-      </section>
-    </main>
+    <!-- ══════════ HOME ══════════ -->
+    <div id="page-home" class="page">
+      <main>
+        <p class="lede fade-item">
+          biomedical engineering @ johns hopkins. i build things that read the brain and body:
+          eeg, emg, and the models that make sense of them.
+        </p>
 
-    <footer class="site-footer">
-      <div class="frame footer-inner">
-        <span>Aavid Mathrawala</span>
-        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
-      </div>
+        <section class="fade-item">
+          <h2>now</h2>
+          <ul class="dots">
+            <li>in-ear eeg research at the thakor lab of neural engineering</li>
+            <li>building milo, an semg wearable that shows how your muscles work while you train</li>
+            <li>first year of biomedical engineering at johns hopkins, class of 2030</li>
+          </ul>
+        </section>
+
+        <section class="fade-item">
+          <h2>highlights</h2>
+          <ul class="dots">
+            <li><span>first-author paper on eeg-based acute pain classification, <a class="ilink" href="https://arxiv.org/abs/2510.05511" target="_blank" rel="noopener noreferrer">on arxiv</a></span></li>
+            <li>1st place, wssef / crsef embedded systems (2025)</li>
+            <li>1st place, microsoft ai hackathon</li>
+            <li>presented neurodose to the ceo of houston methodist</li>
+          </ul>
+        </section>
+
+        <section class="fade-item">
+          <h2>toolkit</h2>
+          <ul class="dots">
+            <li>python, javascript, arduino, unity</li>
+            <li>eeg and semg acquisition, signal processing</li>
+            <li>comsol finite-element simulation</li>
+            <li>machine learning: xgboost, svm</li>
+          </ul>
+        </section>
+
+        <section class="fade-item">
+          <h2>reach me:</h2>
+          <div class="icons">
+            <a href="mailto:aavid.mathrawala@gmail.com" aria-label="email">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg>
+            </a>
+            <a href="https://github.com/ughRural" target="_blank" rel="noopener noreferrer" aria-label="github">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+            </a>
+            <a href="https://arxiv.org/abs/2510.05511" target="_blank" rel="noopener noreferrer" aria-label="arxiv paper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 15.5h6M9 8.5h2"/></svg>
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- ══════════ EXPERIENCE ══════════ -->
+    <div id="page-experience" class="page page-hidden">
+      <main>
+        <h1 class="sr-only">experience</h1>
+
+        <section class="fade-item">
+          <h2>research + work</h2>
+          <ol class="rows">
+            <li class="row">
+              <span class="yr">2026 – now</span>
+              <div>
+                <p class="t">undergraduate researcher <span class="at">@ thakor lab of neural engineering, johns hopkins</span></p>
+                <p class="d">analyzing in-ear eeg recordings in python and building comsol finite-element models to find the best electrode placements in the ear canal</p>
+              </div>
+            </li>
+            <li class="row">
+              <span class="yr">2025</span>
+              <div>
+                <p class="t">research intern <span class="at">@ houston methodist, center for innovation</span></p>
+                <p class="d">studied hospital pain-management workflows with the innovation lab and used clinical feedback to improve the eeg pain model</p>
+              </div>
+            </li>
+            <li class="row">
+              <span class="yr">2025</span>
+              <div>
+                <p class="t">neuroscience + ai research intern <span class="at">@ openbeing lab</span></p>
+                <p class="d">modeled memory formation and loss with deep learning, and built neural network simulations of memory retrieval and motor control</p>
+              </div>
+            </li>
+            <li class="row">
+              <span class="yr">2024 – 2026</span>
+              <div>
+                <p class="t">president <span class="at">@ science national honor society, eastlake</span></p>
+                <p class="d">led 200+ members. ran science fairs, outreach events for k–8 students, and funded stem camps with uw researchers and the kcls library</p>
+              </div>
+            </li>
+            <li class="row">
+              <span class="yr">2024</span>
+              <div>
+                <p class="t">intern <span class="at">@ seattle children's research institute</span></p>
+                <p class="d">cancer immunology in the sarkar lab: t-cell research, pcr, and flow cytometry</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section class="fade-item">
+          <h2>education</h2>
+          <ol class="rows">
+            <li class="row">
+              <span class="yr">2026 – 2030</span>
+              <div>
+                <p class="t">johns hopkins university</p>
+                <p class="d">biomedical engineering</p>
+              </div>
+            </li>
+            <li class="row">
+              <span class="yr">class of 2026</span>
+              <div>
+                <p class="t">eastlake high school</p>
+                <p class="d">sammamish, washington</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section class="fade-item">
+          <h2>awards</h2>
+          <ul class="dots">
+            <li>1st place, wssef / crsef embedded systems (2025)</li>
+            <li>1st place, microsoft ai hackathon</li>
+            <li>presented neurodose to the ceo of houston methodist</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <!-- ══════════ PROJECTS ══════════ -->
+    <div id="page-projects" class="page page-hidden">
+      <main>
+        <h1 class="sr-only">projects</h1>
+        <div class="grid">
+
+          <!-- neurodose -->
+          <article class="card fade-item">
+            <a class="viz" href="https://arxiv.org/abs/2510.05511" target="_blank" rel="noopener noreferrer" aria-label="neurodose paper on arxiv">
+              <div class="win" style="top:3%;right:0;width:82%;aspect-ratio:1/1;">
+                <img src="assets/neurodose-dashboard.webp" alt="neurodose clinician dashboard showing live brain activity and a pain trend" loading="lazy">
+              </div>
+              <div class="tile" style="top:3%;left:0;width:17%;">
+                <img src="assets/neurodose-logo.webp" alt="neurodose logo" loading="lazy">
+              </div>
+              <div class="chip" style="top:62%;left:0;">
+                <b>94.2%</b><span>real-time accuracy</span>
+              </div>
+              <span class="out" style="top:90%;left:1%;">arxiv 2510.05511
+                <svg width="9" height="9" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 1.5H10.5V8.5"/><path d="M10.5 1.5L1.5 10.5"/></svg>
+              </span>
+            </a>
+            <p class="t">neurodose<span class="y">2025</span></p>
+            <p class="d">reads live eeg and classifies low vs. high pain in real time, giving clinicians an objective signal next to the 0–10 scale</p>
+          </article>
+
+          <!-- in-ear eeg -->
+          <article class="card fade-item">
+            <div class="viz">
+              <div class="win" style="top:3%;right:0;width:88%;aspect-ratio:11/9;">
+                <svg viewBox="0 0 440 360" role="img" aria-label="illustration of sensitivity contours around electrodes in an ear canal">
+                  <defs>
+                    <pattern id="g1" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" fill="none" stroke="#fff" stroke-opacity=".05"/></pattern>
+                  </defs>
+                  <rect width="440" height="360" fill="url(#g1)"/>
+                  <g class="rings" fill="none" stroke="var(--cyan)">
+                    <ellipse cx="300" cy="150" rx="34" ry="26"/>
+                    <ellipse cx="300" cy="150" rx="70" ry="54"/>
+                    <ellipse cx="300" cy="150" rx="110" ry="86"/>
+                    <ellipse cx="300" cy="150" rx="154" ry="122"/>
+                    <ellipse cx="300" cy="150" rx="202" ry="162"/>
+                  </g>
+                  <circle cx="300" cy="150" r="5" fill="var(--pink)"/>
+                  <circle class="ping" cx="300" cy="150" r="5" fill="none" stroke="var(--pink)"/>
+                  <!-- ear canal -->
+                  <path d="M0 232 C70 226 108 206 150 214 C186 221 204 246 240 244" fill="none" stroke="#e8e8f2" stroke-opacity=".7" stroke-width="1.6"/>
+                  <path d="M0 292 C76 290 112 268 150 274 C190 281 206 300 240 296" fill="none" stroke="#e8e8f2" stroke-opacity=".7" stroke-width="1.6"/>
+                  <path d="M240 244 C250 258 250 282 240 296" fill="none" stroke="#e8e8f2" stroke-opacity=".7" stroke-width="1.6"/>
+                  <g fill="var(--yellow)">
+                    <circle cx="78" cy="224" r="5"/><circle cx="150" cy="214" r="5"/><circle cx="206" cy="232" r="5"/>
+                    <circle cx="112" cy="279" r="5"/><circle cx="192" cy="284" r="5"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="chip" style="top:70%;left:0;">
+                <b>fem</b><span>comsol lead-field maps</span>
+              </div>
+            </div>
+            <p class="t">in-ear eeg electrode optimization<span class="y">2026</span></p>
+            <p class="d">finite-element models across ear-canal geometries and neural sources, mapping where in-ear electrodes record best. manuscript in preparation</p>
+          </article>
+
+          <!-- motor imagery + vr -->
+          <article class="card fade-item">
+            <div class="viz">
+              <div class="win" style="top:3%;right:0;width:84%;aspect-ratio:16/13;">
+                <svg viewBox="0 0 400 325" preserveAspectRatio="none" role="img" aria-label="illustration of scrolling eeg traces">
+                  <g class="scroll" fill="none" stroke-width="1.4" stroke-linejoin="round">
+                    <path data-trace="eeg" data-seed="3"  data-y="50"  data-amp="17" stroke="var(--cyan)"/>
+                    <path data-trace="eeg" data-seed="11" data-y="125" data-amp="17" stroke="var(--cyan)" stroke-opacity=".7"/>
+                    <path data-trace="eeg" data-seed="27" data-y="200" data-amp="17" stroke="var(--pink)"/>
+                    <path data-trace="eeg" data-seed="41" data-y="275" data-amp="17" stroke="var(--cyan)" stroke-opacity=".7"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="win intent" style="top:62%;left:0;width:46%;">
+                <span class="k">intent</span>
+                <span class="v"><i>◀</i> left hand</span>
+                <span class="bar"><span></span></span>
+              </div>
+            </div>
+            <p class="t">motor imagery + vr<span class="y">2025</span></p>
+            <p class="d">a brain-computer interface that decodes imagined movement from eeg (xgboost and svm, 92% accuracy) and drives unity games through a custom vr headset mount</p>
+          </article>
+
+          <!-- milo -->
+          <article class="card fade-item">
+            <div class="viz">
+              <div class="win" style="top:3%;right:0;width:84%;aspect-ratio:16/11;">
+                <svg viewBox="0 0 400 275" role="img" aria-label="illustration of a live muscle activation signal">
+                  <line x1="0" y1="110" x2="400" y2="110" stroke="#fff" stroke-opacity=".08"/>
+                  <g class="scroll" fill="none" stroke-width="1.2" stroke-linejoin="round">
+                    <path data-trace="emg" data-seed="7" data-y="110" data-amp="88" stroke="var(--yellow)"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="win photo" style="top:44%;left:0;width:46%;aspect-ratio:1/1;">
+                <img src="assets/milo-logo.webp" alt="milo logo: a flexed arm wearing a small sensor" loading="lazy">
+              </div>
+            </div>
+            <p class="t">milo<span class="y">2026</span></p>
+            <p class="d">a wearable semg sensor and iphone app that show live muscle activation, exercise form, and fatigue while you train. johns hopkins–backed</p>
+          </article>
+
+        </div>
+      </main>
+    </div>
+
+    <!-- ══════════ CONTACT ══════════ -->
+    <div id="page-contact" class="page page-hidden">
+      <main>
+        <h1 class="sr-only">contact</h1>
+
+        <section class="fade-item">
+          <h2>email</h2>
+          <p><a class="ilink" href="mailto:aavid.mathrawala@gmail.com">aavid.mathrawala@gmail.com</a></p>
+        </section>
+
+        <section class="fade-item">
+          <h2>elsewhere</h2>
+          <ul class="dots">
+            <li><span>github: <a class="ilink" href="https://github.com/ughRural" target="_blank" rel="noopener noreferrer">ughRural</a></span></li>
+            <li><span>paper: <a class="ilink" href="https://arxiv.org/abs/2510.05511" target="_blank" rel="noopener noreferrer">arxiv 2510.05511</a></span></li>
+          </ul>
+        </section>
+
+        <section class="fade-item">
+          <h2>talk to me about</h2>
+          <ul class="dots">
+            <li>eeg, brain-computer interfaces, and neural engineering research</li>
+            <li>wearables and neurotech startups</li>
+            <li>stem outreach</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <div class="rule"></div>
+      <p>© 2026 aavid mathrawala. all rights reserved.</p>
     </footer>
-  </body>
+
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
 </html>

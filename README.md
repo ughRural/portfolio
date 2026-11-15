@@ -1,15 +1,31 @@
 # Aavid's portfolio
 
-A one-page portfolio for **aavidm.com**. Open **public/index.html** in a browser to preview it.
+The site behind **aavidm.com**: a static, single-file-per-concern site with no build step.
 
-- Edit **public/index.html** to add your projects and bio. Replace the placeholder project and About text before sharing the site.
-- Edit **public/styles.css** to change the layout, typography, or colors.
+- **public/index.html** holds all the content. Each tab (home, experience, projects, contact) is a `<div id="page-…">` block.
+- **public/styles.css** holds the theme. The colors are the variables at the top of the file.
+- **public/script.js** runs the typewriter intro, tab switching, and the animated signal traces on the project cards.
+- **public/assets/** holds the logo, favicon, and project images.
 
-## Deploy with Cloudflare Pages
+## Preview locally
 
-1. In the [Cloudflare dashboard](https://dash.cloudflare.com/), open **Workers & Pages → Create application → Pages → Connect to Git** and choose the GitHub repository.
-2. Set the production branch to **main**, choose **None** for the framework preset, leave the build command blank, and enter **public** as the build output directory. Leave the root directory at its default.
-3. Select **Save and Deploy**. Open the **pages.dev** address Cloudflare gives you to check the deployment.
-4. In the Pages project, open **Custom domains → Set up a domain** and enter **aavidm.com**. For the root domain, the domain must be active on Cloudflare DNS in the same account as the Pages project.
+The logo is drawn with a CSS mask, which browsers block on `file://` pages, so serve the folder instead of opening the file directly:
 
-[Cloudflare Git setup](https://developers.cloudflare.com/pages/get-started/git-integration/) · [Custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/)
+```
+cd public
+python -m http.server 8000
+```
+
+Then open http://localhost:8000.
+
+## Add a project
+
+Copy one `<article class="card fade-item">` block in the projects page of **public/index.html**, then change the image, title, year, and description. Each `.win` inside `.viz` is one floating window; its position and size come from the inline `top` / `left` / `width` values.
+
+## Deploy
+
+**wrangler.jsonc** serves the **public** folder as Cloudflare Workers static assets. With the repository connected to Cloudflare (Workers & Pages → the project → Settings → Builds), every push to **main** deploys. To deploy by hand:
+
+```
+npx wrangler deploy
+```

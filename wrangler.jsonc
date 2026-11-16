@@ -4,9 +4,11 @@
   "assets": {
     "directory": "./public"
   },
-  // Attach the site to the domain on every deploy (creates the DNS records and certificate).
+  // Attach the site to both domains on every deploy (creates the DNS records and certificate).
   "routes": [
     { "pattern": "aavidm.com", "custom_domain": true },
-    { "pattern": "www.aavidm.com", "custom_domain": true }
+    { "pattern": "www.aavidm.com", "custom_domain": true },
+    { "pattern": "mathrawala.com", "custom_domain": true },
+    { "pattern": "www.mathrawala.com", "custom_domain": true }
   ]
 }

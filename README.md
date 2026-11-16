@@ -29,3 +29,11 @@ Copy one `<article class="card fade-item">` block in the projects page of **publ
 ```
 npx wrangler deploy
 ```
+
+## The worker
+
+**src/worker.js** runs in front of the static files. It redirects mathrawala.com to aavidm.com and serves **/api/today**, which the home page uses for "calendar for today". That endpoint reads TickTick with a token stored as a Cloudflare secret, so the token is never in this repository or in the page. To change the token:
+
+```
+npx wrangler secret put TICKTICK_TOKEN
+```

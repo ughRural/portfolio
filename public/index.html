@@ -48,20 +48,53 @@
         <p class="lede fade-item">biomedical engineering @ johns hopkins</p>
 
         <section class="fade-item">
-          <h2>takes:</h2>
-          <ul class="dots">
-            <li>judge a book by its cover</li>
-            <li>thinking is the root of failure</li>
-            <li>be greedy</li>
+          <h2>calendar for today:</h2>
+          <ul class="cal" id="cal" aria-live="polite">
+            <li class="cal-note">checking the calendar…</li>
           </ul>
         </section>
 
         <section class="fade-item">
           <h2>fav animes:</h2>
-          <ul class="dots">
-            <li>sword art online</li>
-            <li>monster</li>
-            <li>code geass</li>
+          <ul class="favs">
+            <li class="fav">
+              <button class="fav-head" aria-expanded="false"><span class="t">sword art online</span><span class="chev" aria-hidden="true"></span></button>
+              <div class="xp-body"><div class="fav-inner">
+                <svg class="fav-art" viewBox="0 0 120 120" role="img" aria-label="two crossed swords, one black and one pale blue">
+                  <g transform="rotate(38 60 60)">
+                    <path d="M60 4 L66 20 V84 H54 V20Z" fill="#15181b" stroke="#8a949c" stroke-width="1.5" stroke-linejoin="round"/>
+                    <path d="M60 10 V84" stroke="#59626a" stroke-width="1.2"/>
+                    <path d="M40 84 H80 L74 92 H46Z" fill="#23282c" stroke="#8a949c" stroke-width="1.5" stroke-linejoin="round"/>
+                    <rect x="56.5" y="92" width="7" height="18" rx="2" fill="#0d0f11" stroke="#8a949c" stroke-width="1.2"/>
+                    <circle cx="60" cy="113" r="3.2" fill="#23282c" stroke="#8a949c" stroke-width="1.2"/>
+                  </g>
+                  <g transform="rotate(-38 60 60)" class="glint">
+                    <path d="M60 4 L65 20 V84 H55 V20Z" fill="#bdeee6" stroke="#eafffb" stroke-width="1.5" stroke-linejoin="round"/>
+                    <path d="M60 10 V84" stroke="#6fc9bd" stroke-width="1.2"/>
+                    <path d="M42 80 Q60 90 78 80 L74 91 H46Z" fill="#7fd8cc" stroke="#eafffb" stroke-width="1.5" stroke-linejoin="round"/>
+                    <rect x="56.5" y="91" width="7" height="18" rx="2" fill="#3f8f86" stroke="#eafffb" stroke-width="1.2"/>
+                    <circle cx="60" cy="112" r="3.2" fill="#bdeee6" stroke="#eafffb" stroke-width="1.2"/>
+                  </g>
+                </svg>
+                <p>anime about neurotech and vr, which got me into all of this in the first place. definitely an odd show for an 11 year old, but very impactful</p>
+              </div></div>
+            </li>
+            <li class="fav">
+              <button class="fav-head" aria-expanded="false"><span class="t">monster</span><span class="chev" aria-hidden="true"></span></button>
+              <div class="xp-body"><div class="fav-inner">
+                <img class="fav-art wide" src="assets/monster.webp" width="520" height="250" loading="lazy" alt="the monster title logo">
+                <p>genuinely one of the best thrillers throughout all shows, such an interesting concept of a doctor hunting down one of his own patients</p>
+              </div></div>
+            </li>
+            <li class="fav">
+              <button class="fav-head" aria-expanded="false"><span class="t">code geass</span><span class="chev" aria-hidden="true"></span></button>
+              <div class="xp-body"><div class="fav-inner">
+                <svg class="fav-art sigil" viewBox="0 0 120 120" role="img" aria-label="the geass sigil in red">
+                  <path d="M60 104 C57 80 44 58 10 44 C22 22 40 16 54 30 C46 28 38 30 32 38 C48 46 56 60 60 76 C64 60 72 46 88 38 C82 30 74 28 66 30 C80 16 98 22 110 44 C76 58 63 80 60 104Z" fill="#ff3b4e"/>
+                </svg>
+                <p>rewatched it 3 times, also a show that keeps you on your feet. you never expect what's coming next and i love being on my feet like that</p>
+              </div></div>
+            </li>
           </ul>
         </section>
 
@@ -82,9 +115,6 @@
             </a>
             <a href="https://github.com/ughRural" target="_blank" rel="noopener noreferrer" aria-label="github">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
-            </a>
-            <a href="https://arxiv.org/abs/2510.05511" target="_blank" rel="noopener noreferrer" aria-label="arxiv paper">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 15.5h6M9 8.5h2"/></svg>
             </a>
           </div>
         </section>
@@ -354,7 +384,6 @@
           <h2>elsewhere</h2>
           <ul class="dots">
             <li><span>github: <a class="ilink" href="https://github.com/ughRural" target="_blank" rel="noopener noreferrer">ughRural</a></span></li>
-            <li><span>paper: <a class="ilink" href="https://arxiv.org/abs/2510.05511" target="_blank" rel="noopener noreferrer">arxiv 2510.05511</a></span></li>
           </ul>
         </section>
 
@@ -362,8 +391,7 @@
           <h2>talk to me about</h2>
           <ul class="dots">
             <li>eeg, brain-computer interfaces, and neural engineering research</li>
-            <li>wearables and neurotech startups</li>
-            <li>stem outreach</li>
+            <li>wearables and neurotech</li>
           </ul>
         </section>
           </div>

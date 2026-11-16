@@ -1,8 +1,12 @@
 {
   "name": "portfolio",
   "compatibility_date": "2026-11-13",
+  // The worker handles the mathrawala.com redirect and /api/today, then hands everything else to the static files.
+  "main": "src/worker.js",
   "assets": {
-    "directory": "./public"
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
   },
   // Attach the site to both domains on every deploy (creates the DNS records and certificate).
   "routes": [

@@ -121,6 +121,59 @@
     });
   });
 
+  // ── favourite anime: same click-to-open behaviour ──
+  document.querySelectorAll('.fav-head').forEach(function (head) {
+    head.addEventListener('click', function () {
+      var open = head.parentElement.classList.toggle('open');
+      head.setAttribute('aria-expanded', String(open));
+    });
+  });
+
+  // ── today's calendar, from ticktick by way of /api/today ──
+  var cal = document.getElementById('cal');
+  if (cal) {
+    var clock = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hour: 'numeric', minute: '2-digit' });
+    var hm = function (iso) { return clock.format(new Date(iso)).toLowerCase().replace(' ', '').replace(':00', ''); };
+    var note = function (msg) {
+      cal.textContent = '';
+      var li = document.createElement('li');
+      li.className = 'cal-note';
+      li.textContent = msg;
+      cal.appendChild(li);
+    };
+    var draw = function (data) {
+      if (!data.items.length) return note('nothing on the calendar today');
+      var today = data.date, now = Date.now();
+      var dayOf = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' });
+      cal.textContent = '';
+      data.items.forEach(function (it) {
+        var li = document.createElement('li'), when = document.createElement('span'), what = document.createElement('span');
+        when.className = 'when'; what.className = 'what';
+        var s = new Date(it.start), e = new Date(it.end);
+        if (it.allDay) when.textContent = 'all day';
+        else {
+          // clip the label to today when something spills over midnight
+          var from = dayOf.format(s) < today ? '…' : hm(it.start);
+          var to = dayOf.format(new Date(e - 1)) > today ? '…' : hm(it.end);
+          when.textContent = e > s ? from + ' – ' + to : from;
+          if (e <= now && e > s) li.className = 'past';
+          else if (s <= now && now < e) li.className = 'now';
+        }
+        what.textContent = it.title;
+        li.appendChild(when); li.appendChild(what);
+        cal.appendChild(li);
+      });
+    };
+    var load = function () {
+      fetch('/api/today').then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        return r.json();
+      }).then(draw).catch(function () { note('calendar is offline right now'); });
+    };
+    load();
+    setInterval(load, 5 * 60 * 1000);
+  }
+
   // ── live stats on the home page ──
   // Each value drifts as a random walk inside its range.
   function drift(el, range, step, every) {
